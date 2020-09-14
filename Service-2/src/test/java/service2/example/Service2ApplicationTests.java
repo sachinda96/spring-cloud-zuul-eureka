@@ -1,10 +1,10 @@
-package service1.example.Service1;
+package service2.example;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Service1ApplicationTests {
+class Service2ApplicationTests {
 
 	@Test
 	void contextLoads() {

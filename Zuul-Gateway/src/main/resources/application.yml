@@ -1,0 +1,28 @@
+spring:
+  application:
+    name : APIGATEWAY
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 50000
+
+ribbon:
+  ConnectTimeout : 3000
+  ReadTimeout : 5000
+  maxAutoRetries : 1
+  MaxAutoRetriesNextServer : 2
+
+zuul:
+  sensitiveHeaders: Cookie,Set-Cookie
+  ignored-headers : Access-Control-Allow-Origin
+  routes:
+    service1:
+      path : /service1/**
+      serviceId : service1
+    service2:
+      path: /service2/**
+      serviceId: service2
